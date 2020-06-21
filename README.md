@@ -35,5 +35,5 @@ Since one cannot simply input a date string into your model, therefore we introd
 ## Models, Hyperparameters, and Test and Train data
 Different hyperparameters and testing and training datasets were tested on the following LSTM model architecture.
 
-![Loss](https://github.com/hf04097/covid19pakprediction/blob/master/images/last40_loss.png)
+![Loss](images/last40_loss.png)
 
