@@ -36,6 +36,6 @@ Since one cannot simply input a date string into your model, therefore we introd
 Different hyperparameters and testing and training datasets were tested on the following LSTM model architecture.
 
 <p align="center">
-  <img src="/images/model_architecture.png">
+  <img src="/images/model_architecture1.png">
 </p>
 
