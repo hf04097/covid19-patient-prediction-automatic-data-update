@@ -32,6 +32,9 @@ Since one cannot simply input a date string into your model, therefore we introd
 | male_smokers | 213 | Afghanistan and Peru had nan values for male_smokers. Afghanistan’s male_smokers value was replaced with Pakistan’s and Peru’s was replaced with Brazil’s |
 
 
+## Models, Hyperparameters, and Test and Train data
+Different hyperparameters and testing and training datasets were tested on the following LSTM model architecture.
+![Image of LSTM model architecture]( https://github.com/hf04097/covid19pakprediction/blob/master/images/model_architecture.png)
 
 
 
