@@ -10,11 +10,26 @@ The data used for the prediction is maintained by [Our world in Data](https://ou
 
 ### Choosing Data Varaibles
 This dataset contains data from 208 countries however; we selected 40 countries from the dataset. The top 40 countries that had the highest total cases reported were selected as of 15 June 2020. 
-Data with similar columns or columns that gave double information were dropped. For example since the dataset contained the column total_cases the total_cases_per_million column was dropped as they share the same information.
+Data with similar columns or columns that gave double information were dropped. For example, since the dataset contained the column total_cases, the total_cases_per_million column was dropped as they share the same information.
 According to Halkjaer and Winther, the correlations in the input data severely slow down learning therefore, we used Pearson Correlation Coefficient Matrix to determine the correlation between the input data and new_cases.
 The matrix as shown in figure 1 shows the correlation between new_cases and input data. All the variables having a Pearson Correlation, P, greater than |P| > 0.1 were dropped.
 
 ## Data processing
+
+### Making Data Categorical
+The location column contains the string value representing the name of the country and this is not a valid entry for Neural Network. Hence, the location column is one hot encoded by having a column for each country and if the data row is of that country there is a 1 in that column else there is 0.
+
+### Substitute of Dates
+Since one cannot simply input a date string into your model, therefore we introduced a column of number_of_days. We found the date at which the first COVID19 case was reported in each country and number_of_days entry is set to the the number of days from the date the first case was reported.
+
+### Dealing with Nan Values
+ --------------------- | -------------------- | ------------------
+| Handwashing_facilities| 3547 | Column was dropped |
+| Extreme_poverty| 1722 | Column was dropped |
+| stringency_index | 256 | last_stringent, the last non-null stringency_index | value for each country was found. All the null stringency_index after the | last_strigenent were replaced by the last_strigenent |
+
+| female_smokers | 107 | Afghanistan was the only country with nan values for female_smokers. For Afghanistan its value was replaced with Pakistan’s|
+| male_smokers | 213 | Afghanistan and Peru had nan values for male_smokers. Afghanistan’s male_smokers value was replaced with Pakistan’s and Peru’s was replaced with Brazil’s.
 
 
 
