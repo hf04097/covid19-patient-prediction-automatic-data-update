@@ -35,5 +35,7 @@ Since one cannot simply input a date string into your model, therefore we introd
 ## Models, Hyperparameters, and Test and Train data
 Different hyperparameters and testing and training datasets were tested on the following LSTM model architecture.
 
-![Loss](images/last40_loss.png)
+<p align="center">
+  <img width="460" height="300" src="images/last40_loss.png">
+</p>
 
