@@ -46,7 +46,7 @@ With this selection of data an error of 4402 was reached with Linear Regression.
 With the following hyperparameters the an error of  5440 was reached with LSTM.
 Hyperparameters: epochs = 200, learning rate = 0.001, batch size = 128.
 The  loss and Mean Squared Error (MSE) graphs are shown below:
-<img src="/images/xy0.7loss.png"> <img src="images/xy0.7mse.png"/> 
+<img src="/images/xy0.7loss.png" width="300px" height="210px"/> <img src="images/xy0.7mse.png" width="300px" height="210px"/> 
 
 
 
