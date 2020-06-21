@@ -23,7 +23,8 @@ The location column contains the string value representing the name of the count
 Since one cannot simply input a date string into your model, therefore we introduced a column of number_of_days. We found the date at which the first COVID19 case was reported in each country and number_of_days entry is set to the the number of days from the date the first case was reported.
 
 ### Dealing with Nan Values
- --------------------- | -------------------- | ------------------
+| Column with Nan Value | Number of Nan Values in the column | Processing applied |
+ --------------------- | :----------------------------------: |:----------------: |
 | Handwashing_facilities| 3547 | Column was dropped |
 | Extreme_poverty| 1722 | Column was dropped |
 | stringency_index | 256 | last_stringent, the last non-null stringency_index | value for each country was found. All the null stringency_index after the | last_strigenent were replaced by the last_strigenent |
