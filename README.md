@@ -39,3 +39,14 @@ Different hyperparameters and testing and training datasets were tested on the f
   <img src="/images/model_architecture1.png">
 </p>
 
+### Data as whole world data including Pakistan
+Whole world’s data including Pakistan’s was chosen and was divided with a split index of 0.70, i.e., 70% of the data was X_train and 30% was X_test.
+
+With this selection of data an error of 4402 was reached with Linear Regression.
+With the following hyperparameters the an error of  5440 was reached with LSTM.
+Hyperparameters: epochs = 200, learning rate = 0.001, batch size = 128.
+The  loss and Mean Squared Error (MSE) graphs are shown below
+![loss xy0.7]( /images/xy0.7loss.png) ![mse xy0.7]( /images/xy0.7mse.png
+)
+
+
