@@ -27,10 +27,10 @@ Since one cannot simply input a date string into your model, therefore we introd
  --------------------- | :----------------------------------: |:----------------: |
 | Handwashing_facilities| 3547 | Column was dropped |
 | Extreme_poverty| 1722 | Column was dropped |
-| stringency_index | 256 | last_stringent, the last non-null stringency_index | value for each country was found. All the null stringency_index after the | last_strigenent were replaced by the last_strigenent |
+| stringency_index | 256 | last_stringent, the last non-null stringency_index value for each country was found. All the null stringency_index after the last_strigenent were replaced by the last_strigenent |
 
 | female_smokers | 107 | Afghanistan was the only country with nan values for female_smokers. For Afghanistan its value was replaced with Pakistan’s|
-| male_smokers | 213 | Afghanistan and Peru had nan values for male_smokers. Afghanistan’s male_smokers value was replaced with Pakistan’s and Peru’s was replaced with Brazil’s.
+| male_smokers | 213 | Afghanistan and Peru had nan values for male_smokers. Afghanistan’s male_smokers value was replaced with Pakistan’s and Peru’s was replaced with Brazil’s |
 
 
 
