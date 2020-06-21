@@ -34,7 +34,7 @@ Since one cannot simply input a date string into your model, therefore we introd
 
 ## Models, Hyperparameters, and Test and Train data
 Different hyperparameters and testing and training datasets were tested on the following LSTM model architecture.
-![Image of LSTM model architecture]( https://github.com/hf04097/covid19pakprediction/blob/master/images/model_architecture.png)
+<img src="https://github.com/hf04097/covid19pakprediction/blob/master/images/model_architecture.png" alt="model_architecture" width="50" height="300">
 
 
 
