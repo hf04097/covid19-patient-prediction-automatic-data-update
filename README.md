@@ -2,6 +2,11 @@
 
 ## Introduction
 Neural Networks are considered to be one of the most efficient methods that give us predictions, patterns, trends and forecasts. With the rise in the Covid19 cases throughout the world and in Pakistan, different approaches have been adopted and forecasting networks are build. However, no method have been yet able to accurately able to predict the intricate and heterogeneous situation in the world. This project is a step to explore different forecasting techniques to predict the number of Covid19 cases in Pakistan. We tried and tested different data-driven LSTM models and regression techniques to predict the number of new COVID-19 cases.
+<p align="center">
+  <img src="/images/databaseNNpatient.jpg">
+</p>
+
+
 
 ## Data Selection
 
@@ -76,7 +81,7 @@ With hyperparameters, epochs = 200, learning rate = 0.001 and batch size = 32 on
 The Mean Squared Error (MSE) graphs for model trained on world’s data and Pakistan’s data is shown below respectively.
 
 ![mse world 1](/images/model mse world 2.png)
-![mse pak 1](/model mse pak 2.png)
+![mse pak 1](/images/model mse pak 2.png)
 
 The prediction achieved with this method and error = 2694 is shown in the graph below
 
