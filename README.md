@@ -35,9 +35,6 @@ Since one cannot simply input a date string into your model, therefore we introd
 ## Models, Hyperparameters, and Test and Train data
 Different hyperparameters and testing and training datasets were tested on the following LSTM model architecture.
 
-<p align="center">
-  <img src="/images/model_architecture1.png">
-</p>
 
 ### Data as whole world data including Pakistan
 Whole world’s data including Pakistan’s was chosen and was divided with a split index of 0.70, i.e., 70% of the data was X_train and 30% was X_test.
@@ -48,6 +45,9 @@ Hyperparameters: epochs = 200, learning rate = 0.001, batch size = 128.
 The  Mean Squared Error (MSE) graphs is shown below:
 
 ![mse xy0.7]( /images/xy0.7mse.png)
+The prediction graph achieved after Linear Regression is shown below
+
+![prediction Linear xy0.7]( /images/xy0.7_linearRegression)
 
 ### Keeping test set as last 40 days of Pakistan
 
@@ -56,16 +56,19 @@ With hyperparameters epochs = 100, learning rate = 0.001 and batch size = 64. An
 
 ![mse last40]( /images/last40_mse.png)
 
-### First training on World data and using trained weights on Pakistan data
+The prediction achieved with this method and error = 3945 is shown in the graph below
 
+![mse last40]( /images/ last40prediction)
+
+### First training on World data and using trained weights on Pakistan data
 First, a model was trained on world’s data but it did not included Pakistan in it. Then the trained weights from the world’s model were set of another model that was then trained using Pakistan’s model. 
-With hyperparameters, epochs = 200, learning rate = 0.001 and batch size = 128 on world’s data and epochs = 100, learning rate = 0.01 and batch size = 32 on Pakistan’s data an error of 2694 was achieved.
+With hyperparameters, epochs = 200, learning rate = 0.001 and batch size = 128 on world’s data and epochs = 100, learning rate = 0.01 and batch size = 32 on Pakistan’s data an error of 2741 was achieved.
 The Mean Squared Error (MSE) graphs for model trained on world’s data and Pakistan’s data is shown below respectively.
 
 ![mse world]( /images/world_model_mse.png)
 ![mse pak]( /images/pak_model_mse.png)
 
-The prediction given with these methods and error is shown in the graph below
+The prediction achieved with this method and error = 2741 is shown in the graph below
 
 ![predicted 0]( /images/world_pak_predicted.png)
 
@@ -75,7 +78,7 @@ The Mean Squared Error (MSE) graphs for model trained on world’s data and Paki
 ![mse world 1]( /images/model mse world 2.png)
 ![mse pak 1]( / model mse pak 2.png)
 
-The prediction given with these methods and error is shown in the graph below
+The prediction achieved with this method and error = 2694 is shown in the graph below
 
 ![prediction 1]( /images/world_pak_predicted2.png)
 
