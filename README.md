@@ -18,8 +18,9 @@ To avoid repetitive reading of files and to work smoothly when our data grows, w
 ### Choosing Data Varaibles
 This dataset contains data from 208 countries however; we selected 40 countries from the dataset. The top 40 countries that had the highest total cases reported were selected as of 15 June 2020. 
 Data with similar columns or columns that gave double information were dropped. For example, since the dataset contained the column total_cases, the total_cases_per_million column was dropped as they share the same information.
-According to Halkjaer and Winther, the correlations in the input data severely slow down learning therefore, we used Pearson Correlation Coefficient Matrix to determine the correlation between the input data and new_cases.
-The matrix as shown in figure 1 shows the correlation between new_cases and input data. All the variables having a Pearson Correlation, P, greater than |P| > 0.1 were dropped.
+According to Halkjaer and Winther, the correlations in the input data severely slow down learning therefore, we used Pearson Correlation Coefficient Matrix to determine the correlation between the input data and new_cases. All the variables having a Pearson Correlation, P, greater than |P| > 0.1 were dropped. The figure shows the Pearson correlation between new_cases and input data.
+
+![Pearson Coefficient Matrix](/images/pearsonCoeffiecient.png)
 
 ## Data processing
 
@@ -30,17 +31,13 @@ The location column contains the string value representing the name of the count
 Since one cannot simply input a date string into your model, therefore we introduced a column of number_of_days. We found the date at which the first COVID19 case was reported in each country and number_of_days entry is set to the the number of days from the date the first case was reported.
 
 ### Dealing with Nan Values
-| Column with Nan Value | Number of Nan Values in the column | Processing applied |
- --------------------- | :----------------------------------: |:----------------: |
-| Handwashing_facilities| 3547 | Column was dropped |
-| Extreme_poverty| 1722 | Column was dropped |
-| stringency_index | 256 | last_stringent, the last non-null stringency_index value for each country was found. All the null stringency_index after the last_strigenent were replaced by the last_strigenent |
-| female_smokers | 107 | Afghanistan was the only country with nan values for female_smokers. For Afghanistan its value was replaced with Pakistan’s|
-| male_smokers | 213 | Afghanistan and Peru had nan values for male_smokers. Afghanistan’s male_smokers value was replaced with Pakistan’s and Peru’s was replaced with Brazil’s |
+
+Columns having NaN value greater than 1000 were dropped (handwashing_facilitites and extreme_poverty was dropped). To deal with NaN values of strigency_index last_stringent, the last non-null stringency_index value for each country was found. All the null stringency_index after the last_strigenent were replaced by the last_strigenent. Countries having NaN values for male_smokers and female_smokers were replaced by a similar country’s value.  
 
 
 ## Models, Hyperparameters, and Test and Train data
-Different hyperparameters and testing and training datasets were tested on the following LSTM model architecture.
+
+Different hyperparameters and testing and training datasets were tested on the following LSTM model architecture however, throughout Adam was used as an optimizer with varying learning rate.
 
 ![architecture](/images/model_architecture1.png)
 
@@ -93,5 +90,6 @@ The prediction achieved with this method and error = 2694 is shown in the graph 
 
 ## Conclusion
 
+Different hyperparameters anf training and test set combinations were tried however the predictions achieved were inaccurate and insufficient to to fully represent the complex, evolving, and heterogeneous realities of our world. We believe that the predictions are heavily conditioned by the quality and insufficient quantity of the data. The data depends on the publicly available or submitted data by different countries and the data may not represent the actual cases reported. With the change in data which is the theoretical input of our model one should expect to see changes in the predictions. 
 
 
