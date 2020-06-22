@@ -50,6 +50,7 @@ With the following hyperparameters the an error of  5440 was reached with LSTM.
 Hyperparameters: epochs = 200, learning rate = 0.001, batch size = 128.
 The  Mean Squared Error (MSE) graphs is shown below:
 
+![mse whole](/images/xy0.7mse.png)
 
 The prediction graph achieved after Linear Regression is shown below
 
