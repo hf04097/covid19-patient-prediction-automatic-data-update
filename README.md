@@ -90,6 +90,6 @@ The prediction achieved with this method and error = 2694 is shown in the graph 
 
 ## Conclusion
 
-Different hyperparameters anf training and test set combinations were tried however the predictions achieved were inaccurate and insufficient to to fully represent the complex, evolving, and heterogeneous realities of our world. We believe that the predictions are heavily conditioned by the quality and insufficient quantity of the data. The data depends on the publicly available or submitted data by different countries and the data may not represent the actual cases reported. With the change in data which is the theoretical input of our model one should expect to see changes in the predictions. 
+Different hyperparameters and training and test set combinations were tried however the predictions achieved were inaccurate and insufficient to to fully represent the complex, evolving and heterogeneous realities of our world. We believe that the predictions are heavily conditioned by the quality and insufficient quantity of the data. The data depends on the publicly available or submitted data by different countries and the data may not represent the actual cases reported. With the change in data which is the theoretical input of our model one should expect to see changes in the predictions. 
 
 
