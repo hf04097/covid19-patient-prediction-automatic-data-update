@@ -15,7 +15,7 @@ The data used for the prediction is maintained by [Our world in Data](https://ou
 
 To avoid repetitive reading of files and to work smoothly when our data grows, we created a database for our Data. Data was scrapped using pandas and MySQL database was made using Amazon Web Services and has two tables, country and cases. The data-pipeline is connected to the database and only adds new data to the database i.e. data for unprocessed dates.
 
-### Choosing Data Varaibles
+### Choosing Data Variables
 This dataset contains data from 208 countries however; we selected 40 countries from the dataset. The top 40 countries that had the highest total cases reported were selected as of 15 June 2020. 
 Data with similar columns or columns that gave double information were dropped. For example, since the dataset contained the column total_cases, the total_cases_per_million column was dropped as they share the same information.
 According to Halkjaer and Winther, the correlations in the input data severely slow down learning therefore, we used Pearson Correlation Coefficient Matrix to determine the correlation between the input data and new_cases. All the variables having a Pearson Correlation, P, greater than |P| > 0.1 were dropped. The figure shows the Pearson correlation between new_cases and input data.
