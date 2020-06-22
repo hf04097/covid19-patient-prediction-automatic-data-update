@@ -11,6 +11,10 @@ Neural Networks are considered to be one of the most efficient methods that give
 ### Data source
 The data used for the prediction is maintained by [Our world in Data](https://ourworldindata.org/coronavirus). The data is updated daily and includes data on confirmed cases, deaths, and testing, as well as other variables of potential interest. List of all columns of the data, it’s description and source can be found on [Codebook for the complete Our World in Data COVID-19 dataset]( https://github.com/owid/covid-19-data/blob/master/public/data/owid-covid-data-codebook.md). 
 
+### Database design and data-pipeline
+
+To avoid repetitive reading of files and to work smoothly when our data grows, we created a database for our Data. Data was scrapped using pandas and MySQL database was made using Amazon Web Services and has two tables, country and cases. The data-pipeline is connected to the database and only adds new data to the database i.e. data for unprocessed dates.
+
 ### Choosing Data Varaibles
 This dataset contains data from 208 countries however; we selected 40 countries from the dataset. The top 40 countries that had the highest total cases reported were selected as of 15 June 2020. 
 Data with similar columns or columns that gave double information were dropped. For example, since the dataset contained the column total_cases, the total_cases_per_million column was dropped as they share the same information.
@@ -37,6 +41,7 @@ Since one cannot simply input a date string into your model, therefore we introd
 
 ## Models, Hyperparameters, and Test and Train data
 Different hyperparameters and testing and training datasets were tested on the following LSTM model architecture.
+
 ![model_architecture1](/images/model_architecture1.png)
 
 ### Data as whole world data including Pakistan
