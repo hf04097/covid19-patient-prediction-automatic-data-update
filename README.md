@@ -34,7 +34,7 @@ Since one cannot simply input a date string into your model, therefore we introd
 
 ## Models, Hyperparameters, and Test and Train data
 Different hyperparameters and testing and training datasets were tested on the following LSTM model architecture.
-
+![model_architecture1](/images/model_architecture1.png)
 
 ### Data as whole world data including Pakistan
 Whole world’s data including Pakistan’s was chosen and was divided with a split index of 0.70, i.e., 70% of the data was X_train and 30% was X_test.
@@ -54,7 +54,7 @@ The prediction graph achieved after Linear Regression is shown below
 The data was selected in a way that last number of days (40 rows) of Pakistan were assigned as test set and train set included world data and rest days of Pakistan data.
 With hyperparameters epochs = 100, learning rate = 0.001 and batch size = 64. An error of 3945 was achieved. The Mean Squared Error (MSE) graphs is shown below:
 
-![mse last40](/images/last40_mse.png)
+![mse last40](/images/last40_mse.png) <br/>
 
 The prediction achieved with this method and error = 3945 is shown in the graph below 
 
