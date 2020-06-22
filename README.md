@@ -49,7 +49,37 @@ The  Mean Squared Error (MSE) graphs is shown below:
 
 ![mse xy0.7]( /images/xy0.7mse.png)
 
+### Keeping test set as last 40 days of Pakistan
 
+The data was selected in a way that last number of days (40 rows) of Pakistan were assigned as test set and train set included world data and rest days of Pakistan data.
+With hyperparameters epochs = 100, learning rate = 0.001 and batch size = 64. An error of 3945 was achieved. The Mean Squared Error (MSE) graphs is shown below:
+
+![mse last40]( /images/last40_mse.png)
+
+### First training on World data and using trained weights on Pakistan data
+
+First, a model was trained on world’s data but it did not included Pakistan in it. Then the trained weights from the world’s model were set of another model that was then trained using Pakistan’s model. 
+With hyperparameters, epochs = 200, learning rate = 0.001 and batch size = 128 on world’s data and epochs = 100, learning rate = 0.01 and batch size = 32 on Pakistan’s data an error of 2694 was achieved.
+The Mean Squared Error (MSE) graphs for model trained on world’s data and Pakistan’s data is shown below respectively.
+
+![mse world]( /images/world_model_mse.png)
+![mse pak]( /images/pak_model_mse.png)
+
+The prediction given with these methods and error is shown in the graph below
+
+![predicted 0]( /images/world_pak_predicted.png)
+
+With hyperparameters, epochs = 200, learning rate = 0.001 and batch size = 32 on world’s data and epochs = 50, learning rate = 0.001 and batch size = 32 on Pakistan’s data an error of 2694 was achieved.
+The Mean Squared Error (MSE) graphs for model trained on world’s data and Pakistan’s data is shown below respectively.
+
+![mse world 1]( /images/model mse world 2.png)
+![mse pak 1]( / model mse pak 2.png)
+
+The prediction given with these methods and error is shown in the graph below
+
+![prediction 1]( /images/world_pak_predicted2.png)
+
+## Conclusion
 
 
 
