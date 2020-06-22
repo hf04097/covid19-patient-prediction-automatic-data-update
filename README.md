@@ -42,7 +42,9 @@ Since one cannot simply input a date string into your model, therefore we introd
 ## Models, Hyperparameters, and Test and Train data
 Different hyperparameters and testing and training datasets were tested on the following LSTM model architecture.
 
-![model_architecture1](/images/model_architecture1.png)
+<p align="center">
+  <img src="/images/model_architecture1.png">
+</p>
 
 ### Data as whole world data including Pakistan
 Whole world’s data including Pakistan’s was chosen and was divided with a split index of 0.70, i.e., 70% of the data was X_train and 30% was X_test.
